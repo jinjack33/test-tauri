@@ -84,7 +84,7 @@ jobs:
         with:
           node-version: 12
       - name: install rust stable
-        uses: actions-rust/toolchain@v1
+        uses: actions-rs/toolchain@v1
         with:
           toolchain: stable
           profile: minimal
@@ -114,7 +114,7 @@ jobs:
           asset_name: ${{ format('nota{0}{1}', matrix.ext, matrix.compressed ) }}
           asset_content_type: application/zip
       - name: build tauri app in debug mode
-        run: yarn tauri:build --debug
+        run: yarn tauri build --debug
       - name: compress (macos only)
         if: matrix.platform == 'macos-latest'
         working-directory: ${{ format('./src-tauri/target/debug/{0}', matrix.buildFolder ) }}
