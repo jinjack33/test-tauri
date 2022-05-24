@@ -31,7 +31,7 @@ jobs:
       run: yarn build
     - run: cargo install tauri-bundler --force
     - name: build tauri app
-      run: yarn tauri:build
+      run: yarn tauri build
   create-release:
     needs: check-build
     runs-on: ubuntu-latest
@@ -95,10 +95,10 @@ jobs:
           sudo apt-get install -y webkit2gtk-4.0
       - run: yarn
       - name: build myapp for tauri app
-        run: yarnbuild
+        run: yarn build
       - run: cargo install tauri-bundler --force
       - name: build tauri app
-        run: yarn tauri:build
+        run: yarn tauri build
       - name: compress (macos only)
         if: matrix.platform == 'macos-latest'
         working-directory: ${{ format('./src-tauri/target/release/{0}', matrix.buildFolder ) }}
