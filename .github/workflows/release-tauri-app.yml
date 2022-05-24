@@ -1,5 +1,5 @@
 
-name: release-tauri-app
+name: release-tauri-app1
 on:
   push:
     branches:
