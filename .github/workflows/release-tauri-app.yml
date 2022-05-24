@@ -117,7 +117,7 @@ jobs:
         run: yarn tauri build --debug
       - name: compress (macos only)
         if: matrix.platform == 'macos-latest'
-        working-directory: './src-tauri/target/debug'
+        working-directory: './src-tauri/target/debug/'
         run: tar -czf ${{ format('tauri-app{0}{1}', matrix.ext, matrix.compressed ) }} ${{ format('tauri-app{0}', matrix.ext ) }}
       - name: upload release asset with debug mode on
         id: upload-release-asset-debug-mode
