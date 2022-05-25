@@ -67,7 +67,7 @@ jobs:
         include:
           - platform: macos-latest
             buildFolder: bundle/osx
-            ext: .dmg
+            ext: .app
             compressed: .tgz
           - platform: windows-latest
             buildFolder: ''
