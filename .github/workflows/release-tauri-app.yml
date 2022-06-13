@@ -107,5 +107,5 @@ jobs:
         with:
           upload_url: ${{ needs.create-release.outputs.RELEASE_UPLOAD_URL }}
           asset_path: ${{ format('./src-tauri/target/release/{0}/tauri-app{1}{2}', matrix.buildFolder, matrix.ext, matrix.compressed ) }}
-          asset_name: ${{ format('test-tauri{0}{1}', matrix.ext, matrix.compressed ) }}
+          asset_name: ${{ format('tauri-app{0}{1}', matrix.ext, matrix.compressed ) }}
           asset_content_type: application/zip
